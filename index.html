@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             position: relative;
-            overflow: hidden; /* Prevents particles from overflowing */
+            overflow: hidden; /* Prevents falling circles from overflowing */
         }
         h1 {
             font-size: 3.5em;
@@ -92,36 +92,32 @@
             transform: scale(1.1);
         }
 
-        /* Green particle animation */
-        .particle {
+        /* Falling circles animation */
+        .falling-circle {
             position: absolute;
             border-radius: 50%;
             background-color: lime;
             opacity: 0.7;
-            animation: float 10s linear infinite;
+            animation: fall 5s linear infinite;
         }
 
-        @keyframes float {
+        @keyframes fall {
             0% {
-                transform: translateY(100vh) translateX(50vw);
-                opacity: 0.5;
-            }
-            50% {
-                transform: translateY(-50vh) translateX(50vw);
-                opacity: 1;
+                transform: translateY(-100px) translateX(calc(100vw * (random(0, 1))));
+                opacity: 0.7;
             }
             100% {
-                transform: translateY(100vh) translateX(-50vw);
+                transform: translateY(100vh) translateX(calc(100vw * (random(0, 1))));
                 opacity: 0.5;
             }
         }
 
-        /* Particle variations */
-        .particle:nth-child(1) { width: 10px; height: 10px; animation-duration: 12s; animation-delay: 0s; }
-        .particle:nth-child(2) { width: 15px; height: 15px; animation-duration: 15s; animation-delay: 2s; }
-        .particle:nth-child(3) { width: 20px; height: 20px; animation-duration: 18s; animation-delay: 4s; }
-        .particle:nth-child(4) { width: 25px; height: 25px; animation-duration: 20s; animation-delay: 6s; }
-        .particle:nth-child(5) { width: 12px; height: 12px; animation-duration: 14s; animation-delay: 8s; }
+        /* Style variations for circles */
+        .falling-circle:nth-child(1) { width: 10px; height: 10px; animation-duration: 5s; animation-delay: 0s; }
+        .falling-circle:nth-child(2) { width: 8px; height: 8px; animation-duration: 6s; animation-delay: 1s; }
+        .falling-circle:nth-child(3) { width: 6px; height: 6px; animation-duration: 4s; animation-delay: 2s; }
+        .falling-circle:nth-child(4) { width: 12px; height: 12px; animation-duration: 5.5s; animation-delay: 3s; }
+        .falling-circle:nth-child(5) { width: 9px; height: 9px; animation-duration: 6.5s; animation-delay: 4s; }
     </style>
 </head>
 <body>
@@ -150,11 +146,11 @@
 
     <button class="glow-button" onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Buy</button>
 
-    <!-- Green particles -->
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+    <!-- Falling circles -->
+    <div class="falling-circle"></div>
+    <div class="falling-circle"></div>
+    <div class="falling-circle"></div>
+    <div class="falling-circle"></div>
+    <div class="falling-circle"></div>
 </body>
 </html>
