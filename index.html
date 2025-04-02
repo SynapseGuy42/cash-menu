@@ -12,7 +12,6 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            overflow: auto;
         }
         h1 {
             font-size: 3.5em;
@@ -35,7 +34,7 @@
         }
         .box {
             width: 350px;
-            height: 220px;
+            height: 220px; 
             padding: 25px;
             margin: 20px 0;
             border-radius: 15px;
@@ -67,26 +66,6 @@
             box-shadow: 0 0 25px green, 0 0 45px lime;
             transform: scale(1.05);
         }
-        .ball {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: green;
-            border-radius: 50%;
-            opacity: 0.8;
-            pointer-events: none;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            from {
-                top: 0;
-            }
-            to {
-                top: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -106,21 +85,5 @@
         </div>
     </div>
     <button class="buy-button" onclick="window.location.href='YOUR_BUY_LINK_HERE'">Buy</button>
-    <script>
-        function createBall() {
-            const ball = document.createElement('div');
-            ball.classList.add('ball');
-            document.body.appendChild(ball);
-            
-            const duration = Math.random() * 5 + 3; 
-            ball.style.animationDuration = `${duration}s`;
-            
-            setTimeout(() => {
-                ball.remove();
-            }, duration * 1000);
-        }
-        
-        setInterval(createBall, 300);
-    </script>
 </body>
 </html>
