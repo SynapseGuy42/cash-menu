@@ -12,7 +12,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: auto;
         }
         h1 {
             font-size: 3.5em;
@@ -75,14 +75,16 @@
             border-radius: 50%;
             opacity: 0.8;
             pointer-events: none;
+            left: 50%;
+            transform: translateX(-50%);
             animation: fall linear infinite;
         }
         @keyframes fall {
             from {
-                transform: translateY(-10px);
+                top: 0;
             }
             to {
-                transform: translateY(100vh);
+                top: 100%;
             }
         }
     </style>
@@ -110,10 +112,7 @@
             ball.classList.add('ball');
             document.body.appendChild(ball);
             
-            const startPos = Math.random() * window.innerWidth;
             const duration = Math.random() * 5 + 3; 
-            
-            ball.style.left = `${startPos}px`;
             ball.style.animationDuration = `${duration}s`;
             
             setTimeout(() => {
