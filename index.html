@@ -16,8 +16,7 @@
         h1 {
             font-size: 3.5em;
             animation: bounce 2s infinite ease-in-out;
-            text-shadow: 0 0 15px green, 0 0 30px green, 0 0 45px lime;
-            margin-top: 20px;
+            text-shadow: 0 0 12px green, 0 0 24px green, 0 0 36px lime;
         }
         @keyframes bounce {
             0%, 100% {
@@ -31,38 +30,41 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .box {
-            width: 500px;
-            padding: 30px;
+            width: 350px; /* Slightly smaller width */
+            height: 220px; /* Slightly smaller height */
+            padding: 25px;
             margin: 20px 0;
-            border-radius: 20px;
-            border: 3px solid green;
+            border-radius: 15px;
+            border: 2px solid green;
             background-color: rgba(0, 255, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             box-shadow: 0 0 15px green;
-            font-size: 1.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .box:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
             box-shadow: 0 0 25px green, 0 0 50px lime;
         }
-        .glow-button {
+        .buy-button {
             background-color: black;
             color: green;
-            border: 3px solid green;
-            padding: 20px 40px;
+            border: 2px solid green;
+            padding: 12px 35px;
             font-size: 22px;
             cursor: pointer;
-            border-radius: 15px;
-            box-shadow: 0 0 15px green;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 0 12px green;
             transition: 0.3s ease-in-out;
-            margin-top: 40px;
         }
-        .glow-button:hover {
-            box-shadow: 0 0 25px green, 0 0 50px lime;
-            transform: scale(1.15);
+        .buy-button:hover {
+            box-shadow: 0 0 25px green, 0 0 45px lime;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -82,7 +84,6 @@
             <p>Overpowered Mods That Makes Your Experience A Ton Better.</p>
         </div>
     </div>
-
-    <button class="glow-button" onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Buy</button>
+    <button class="buy-button" onclick="window.location.href='YOUR_BUY_LINK_HERE'">Buy</button>
 </body>
 </html>
