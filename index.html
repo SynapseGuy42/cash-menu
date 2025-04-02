@@ -89,21 +89,6 @@
             box-shadow: 0 0 20px green, 0 0 40px lime;
             transform: scale(1.1);
         }
-        /* Button click animation */
-        @keyframes clickAnimation {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        .clicked {
-            animation: clickAnimation 0.5s;
-        }
     </style>
 </head>
 <body>
@@ -130,20 +115,7 @@
         </div>
     </div>
 
-    <!-- Buy button with animation -->
-    <button class="glow-button" id="discordBtn" onclick="clickButton()">Buy</button>
-
-    <script>
-        function clickButton() {
-            // Add the clicked animation
-            const button = document.getElementById("discordBtn");
-            button.classList.add("clicked");
-
-            // Redirect after animation completes
-            setTimeout(function() {
-                window.location.href = 'https://discord.com/invite/YOUR_INVITE_LINK'; // Replace with your actual invite link
-            }, 500); // Matches the duration of the animation
-        }
-    </script>
+    <!-- Buy button (just like the YouTube button) -->
+    <button class="glow-button" onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Buy</button>
 </body>
 </html>
