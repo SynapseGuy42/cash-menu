@@ -12,6 +12,8 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            position: relative;
+            overflow: hidden;
         }
         h1 {
             font-size: 3.5em;
@@ -89,6 +91,34 @@
             box-shadow: 0 0 20px green, 0 0 40px lime;
             transform: scale(1.1);
         }
+        /* Green particle animation */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: lime;
+            animation: float 8s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-50vh) translateX(50vw);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(-50vw);
+                opacity: 0.5;
+            }
+        }
+
+        /* Particle variations */
+        .particle:nth-child(1) { width: 10px; height: 10px; animation-duration: 10s; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 15px; height: 15px; animation-duration: 12s; animation-delay: 2s; }
+        .particle:nth-child(3) { width: 20px; height: 20px; animation-duration: 14s; animation-delay: 4s; }
+        .particle:nth-child(4) { width: 25px; height: 25px; animation-duration: 16s; animation-delay: 6s; }
     </style>
 </head>
 <body>
@@ -116,5 +146,12 @@
     </div>
 
     <button class="glow-button" onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Buy</button>
+
+    <!-- Green particles -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
 </body>
 </html>
+
