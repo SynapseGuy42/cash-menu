@@ -89,12 +89,21 @@
             box-shadow: 0 0 20px green, 0 0 40px lime;
             transform: scale(1.1);
         }
+
+        /* Move the Buy button down */
+        .buy-button-container {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
     <!-- Top-right buttons -->
     <div class="top-right-buttons">
-        <button onclick="window.location.href='https://www.youtube.com/YOUR_CHANNEL'">YouTube</button>
+        <button onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Discord</button>
         <button onclick="window.location.href='https://www.youtube.com/YOUR_CHANNEL'">YouTube</button>
         <button onclick="window.location.href='index.html'">Home</button>
     </div>
@@ -115,7 +124,9 @@
         </div>
     </div>
 
-    <!-- Buy button (just like the YouTube button) -->
-    <button class="glow-button" onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Buy</button>
+    <!-- Buy button moved to bottom center -->
+    <div class="buy-button-container">
+        <button class="glow-button" onclick="window.location.href='https://discord.com/invite/YOUR_INVITE_LINK'">Buy</button>
+    </div>
 </body>
 </html>
