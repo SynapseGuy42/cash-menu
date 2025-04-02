@@ -16,7 +16,8 @@
         h1 {
             font-size: 3.5em;
             animation: bounce 2s infinite ease-in-out;
-            text-shadow: 0 0 12px green, 0 0 24px green, 0 0 36px lime;
+            text-shadow: 0 0 15px green, 0 0 30px green, 0 0 45px lime;
+            margin-top: 20px;
         }
         @keyframes bounce {
             0%, 100% {
@@ -28,43 +29,79 @@
         }
         .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
         }
         .box {
-            width: 380px; /* Slightly increased width */
-            height: 220px; 
+            width: 280px;
             padding: 25px;
-            margin: 20px 0;
             border-radius: 15px;
             border: 2px solid green;
             background-color: rgba(0, 255, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 0 15px green;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            box-shadow: 0 0 10px green;
+            font-size: 1.2em;
         }
         .box:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 25px green, 0 0 50px lime;
+            box-shadow: 0 0 20px green, 0 0 40px lime;
         }
-        .buy-button {
+        .review-section {
+            width: 80%;
+            overflow: hidden;
+            margin: 40px auto;
+            border: 2px solid green;
+            border-radius: 15px;
+            background-color: rgba(0, 255, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 0 10px green;
+            position: relative;
+        }
+        .review-container {
+            display: flex;
+            white-space: nowrap;
+            animation: slideReviews 10s linear infinite;
+        }
+        .review {
+            display: inline-block;
+            background-color: black;
+            border: 2px solid green;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 0 10px;
+            min-width: 250px;
+            box-shadow: 0 0 10px green;
+        }
+        @keyframes slideReviews {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .glow-button {
             background-color: black;
             color: green;
-            border: 2px solid green;
-            padding: 12px 35px;
-            font-size: 22px;
+            border: 3px solid green;
+            padding: 20px 40px;
+            font-size: 24px;
             cursor: pointer;
-            border-radius: 12px;
-            margin-top: 30px;
-            box-shadow: 0 0 12px green;
+            border-radius: 15px;
+            box-shadow: 0 0 15px green;
             transition: 0.3s ease-in-out;
+            margin-top: 40px;
         }
-        .buy-button:hover {
-            box-shadow: 0 0 25px green, 0 0 45px lime;
-            transform: scale(1.05);
+        .glow-button:hover {
+            box-shadow: 0 0 25px green, 0 0 50px lime;
+            transform: scale(1.15);
+        }
+        .video-container {
+            display: inline-block;
+            margin-top: 30px;
+            border: 2px solid green; /* Green border around the video */
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .button-container {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -84,6 +121,22 @@
             <p>Overpowered Mods That Makes Your Experience A Ton Better.</p>
         </div>
     </div>
-    <button class="buy-button" onclick="window.location.href='YOUR_BUY_LINK_HERE'">Buy</button>
+    
+    <div class="review-section">
+        <div class="review-container">
+            <div class="review">Amazing product! Totally worth it.</div>
+            <div class="review">Best mod menu out there. Highly recommend!</div>
+            <div class="review">Very easy to use and works perfectly.</div>
+            <div class="review">I love the sleek design and powerful features.</div>
+        </div>
+    </div>
+    
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U035q0KZ9Gk  " frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div class="button-container">
+        <button class="glow-button" onclick="window.location.href='https://www.paypal.com/paypalme/Stealthyclient'">Buy</button>
+    </div>
 </body>
 </html>
