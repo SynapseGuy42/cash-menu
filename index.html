@@ -61,8 +61,7 @@
         .review-container {
             display: flex;
             white-space: nowrap;
-            width: fit-content;
-            animation: slideReviews 6s linear infinite;
+            animation: slideReviews 15s linear infinite;
         }
         .review {
             display: inline-block;
@@ -71,12 +70,12 @@
             border-radius: 10px;
             padding: 15px;
             margin: 0 10px;
-            min-width: 500px;
+            min-width: 500px; /* Made wider for longer text */
             box-shadow: 0 0 10px green;
         }
         @keyframes slideReviews {
             0% { transform: translateX(100%); }
-            100% { transform: translateX(-100% - 100%); }
+            100% { transform: translateX(-100%); }
         }
         .glow-button {
             background-color: black;
