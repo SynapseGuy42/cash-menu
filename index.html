@@ -61,7 +61,7 @@
         .review-container {
             display: flex;
             white-space: nowrap;
-            animation: slideReviews 15s linear infinite;
+            animation: slideReviews 8s linear infinite;
         }
         .review {
             display: inline-block;
@@ -70,7 +70,7 @@
             border-radius: 10px;
             padding: 15px;
             margin: 0 10px;
-            min-width: 350px;
+            min-width: 400px;
             box-shadow: 0 0 10px green;
         }
         @keyframes slideReviews {
@@ -114,15 +114,18 @@
     
     <div class="review-section">
         <div class="review-container">
-            <div class="review">Amazing product! Totally worth it. - John Doe</div>
+            <div class="review">Amazing product! Totally worth it. - John D.</div>
             <div class="review">Best mod menu out there. Highly recommend! - Sarah L.</div>
-            <div class="review">Very easy to use and works perfectly. - Mike P.</div>
-            <div class="review">I love the sleek design and powerful features. - Emily R.</div>
+            <div class="review">Very easy to use and works perfectly. - Mark R.</div>
+            <div class="review">I love the sleek design and powerful features. - Emily W.</div>
         </div>
     </div>
     
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bqib2SIV9hs" frameborder="0" allowfullscreen style="border: 2px solid green;"></iframe>
+    <div style="border: 3px solid green; display: inline-block; padding: 10px; border-radius: 10px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bqib2SIV9hs" frameborder="0" allowfullscreen></iframe>
+    </div>
     
+    <br>
     <button class="glow-button" onclick="window.location.href='https://www.paypal.com/paypalme/Stealthyclient'">Buy</button>
 </body>
 </html>
