@@ -61,7 +61,7 @@
         .review-container {
             display: flex;
             white-space: nowrap;
-            animation: slideReviews 15s linear infinite;
+            animation: slideReviews 10s linear infinite; /* Speeded up animation */
         }
         .review {
             display: inline-block;
@@ -70,8 +70,11 @@
             border-radius: 10px;
             padding: 15px;
             margin: 0 10px;
-            min-width: 500px; /* Made wider for longer text */
+            min-width: 500px;
             box-shadow: 0 0 10px green;
+        }
+        .review:nth-child(3) {
+            min-width: 400px; /* Made the third review box a bit smaller */
         }
         @keyframes slideReviews {
             0% { transform: translateX(100%); }
