@@ -57,6 +57,10 @@
             padding: 20px;
             box-shadow: 0 0 10px green;
             position: relative;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .review-section:hover {
+            box-shadow: 0 0 25px green, 0 0 50px lime;
         }
         .review-container {
             display: flex;
@@ -79,6 +83,9 @@
         @keyframes slideReviews {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-400%); }
+        }
+        .review-section:hover .review-container {
+            animation-play-state: paused; /* Pause the animation when hovering */
         }
         .glow-button {
             background-color: black;
