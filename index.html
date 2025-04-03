@@ -48,7 +48,7 @@
             box-shadow: 0 0 20px green, 0 0 40px lime;
         }
         .review-section {
-            width: 70%; /* Container smaller */
+            width: 70%;
             overflow: hidden;
             margin: 40px auto;
             border: 2px solid green;
@@ -65,7 +65,7 @@
         .review-container {
             display: flex;
             white-space: nowrap;
-            animation: slideReviews 10s linear infinite; /* Adjusted to 10s for quicker reset */
+            animation: slideReviews 10s linear infinite;
         }
         .review {
             display: inline-block;
@@ -78,14 +78,14 @@
             box-shadow: 0 0 10px green;
         }
         .review:nth-child(4) { 
-            min-width: 380px; /* Made 4th review box a bit longer */
+            min-width: 380px;
         }
         @keyframes slideReviews {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-400%); }
         }
         .review-section:hover .review-container {
-            animation-play-state: paused; /* Pause the animation when hovering */
+            animation-play-state: paused;
         }
         .glow-button {
             background-color: black;
@@ -102,6 +102,12 @@
         .glow-button:hover {
             box-shadow: 0 0 25px green, 0 0 50px lime;
             transform: scale(1.15);
+        }
+        .copyright {
+            color: green;
+            font-size: 1.2em;
+            margin-top: 40px;
+            padding: 20px;
         }
     </style>
 </head>
@@ -136,6 +142,10 @@
     </div>
     
     <br>
-    <button class="glow-button" onclick="window.location.href='https://www.bing.com/images/search?view=detailV2&ccid=CCgvLpB%2F&id=987224D4B221ECB5C7892C837E889AE4CCB02658&thid=OIP.CCgvLpB_ClH7FRZrdJ802wHaHa&mediaurl=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2Fbf1df6_c716e2d95f694b96ad96c870c3f05ea0%7Emv2_d_2950_2950_s_4_2.png%2Fv1%2Ffill%2Fw_2950%2Ch_2950%2Cal_c%2Cq_90%2Ffile.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.08282f2e907f0a51fb15166b749f34db%3Frik%3DWCawzOSaiH6DLA%26pid%3DImgRaw%26r%3D0&exph=2950&expw=2950&q=coming+soon+logo&simid=608009555885652425&FORM=IRPRST&ck=8F57316B901B434503F159781A86D363&selectedIndex=7&itb=0&cw=1375&ch=664&ajaxhist=0&ajaxserp=0'">Buy</button>
+    <button class="glow-button" onclick="window.location.href='https://www.paypal.com/paypalme/Stealthyclient'">Buy</button>
+
+    <div class="copyright">
+        &copy; 2025 Synapse. All rights reserved.
+    </div>
 </body>
 </html>
