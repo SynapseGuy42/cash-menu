@@ -48,7 +48,7 @@
             box-shadow: 0 0 20px green, 0 0 40px lime;
         }
         .review-section {
-            width: 70%; /* Made the container smaller */
+            width: 70%; /* Container smaller */
             overflow: hidden;
             margin: 40px auto;
             border: 2px solid green;
@@ -61,7 +61,7 @@
         .review-container {
             display: flex;
             white-space: nowrap;
-            animation: slideReviews 20s linear infinite;
+            animation: slideReviews 15s linear infinite; /* Faster reset speed */
         }
         .review {
             display: inline-block;
@@ -72,6 +72,9 @@
             margin: 0 10px;
             min-width: 350px;
             box-shadow: 0 0 10px green;
+        }
+        .review:nth-child(4) { 
+            min-width: 380px; /* Made 4th review box a bit longer */
         }
         @keyframes slideReviews {
             0% { transform: translateX(100%); }
